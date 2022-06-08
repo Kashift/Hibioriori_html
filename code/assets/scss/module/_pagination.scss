@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+}
+
+.pagination__list {
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+
+.page-numbers {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: bold;
+  color: #000000;
+  border: 1px solid #707070;
+  display: inline-block;
+  &.dots {
+    border: none;
+    transform: translateY(14px);
+  }
+  &.current {
+    color: #fff;
+    border: none;
+    background-color: $main-color;
+  }
+}

@@ -1,0 +1,22 @@
+// ブレイクポイント
+$breakpoints: ( 
+    'sm': 'screen and (max-width: 450px)',
+    'md': 'screen and (max-width: 700px)',
+    'lg': 'screen and (max-width: 910px)',
+    'xl': 'screen and (max-width: 1430px)',
+) !default;
+
+@mixin mq-down($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@function calc-size($size, $width: 390) {
+    @return calc( #{$size} * (100vw / #{$width}))
+}
+
+// pxをemに変換
+@function to-em($px, $font-size: 16) {
+    @return calc(#{$px}em / #{$font-size});
+}

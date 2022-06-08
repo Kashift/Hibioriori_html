@@ -1,0 +1,30 @@
+h2 {
+  font-size: 32px;
+  font-weight: $medium;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $main-color;
+  @include mq-down(md) {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: $medium;
+  color: #fff;
+  background-color: $main-color;
+  border-radius: 8px;
+  padding: 19px 25px 12px;
+  margin-top: 40px;
+  @include mq-down(md) {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-size: 16px;
+  margin-top: 30px;
+  @include mq-down(md) {
+    font-size: 14px;
+  }
+}

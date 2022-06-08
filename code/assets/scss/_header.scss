@@ -1,0 +1,65 @@
+.header__inner {
+  width: 100%;
+  aspect-ratio: 1280/200;
+  background: url(../img/bg01_top.jpg) no-repeat center / cover;
+  position: relative;
+  @include mq-down(md) {
+    aspect-ratio: 1280/300;
+  }
+}
+
+.top .header__inner {
+  display: none;
+}
+
+.header__bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header .main-container {
+  height: 100%;
+}
+
+.header-area {
+  max-width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-right: 52px;
+  padding-left: 77px;
+  margin: 0 auto;
+  @include mq-down(md) {
+    padding-right: calc-size(20);
+    padding-left: calc-size(20);
+  }
+}
+
+.header-logo-link {
+  width: 210px;
+  aspect-ratio: 210/89;
+  @include mq-down(lg) {
+    width: 160px;
+  }
+  @include mq-down(md) {
+    width: calc-size(100);
+  }
+}
+
+.header-logo {
+  width: 100%;
+}
+
+.page-heading {
+  font-size: 28px;
+  @include mq-down(md) {
+    font-size: 26px;
+    margin: 0 auto;
+  }
+  @include mq-down(sm) {
+    font-size: 18px;
+  }
+}

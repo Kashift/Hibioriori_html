@@ -1,0 +1,57 @@
+.single-main {
+  padding-top: 75px;
+  padding-bottom: 170px;
+  @include mq-down(md) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+}
+
+.article {
+  @import 'editor-style';
+  text-align: left;
+}
+
+.article__title {
+  font-size: 42px;
+  font-weight: $bold;
+  @include mq-down(md) {
+    font-size: 36px;
+  }
+}
+
+.article__info {
+  font-weight: $black;
+  color: $main-color;
+}
+
+.article__wrapper {
+  border: 1px solid #707070;
+  border-radius: 10px;
+  padding: 69px 44px 44px;
+  margin-top: 20px;
+  @include mq-down(md) {
+    padding: calc-size(40) calc-size(20) calc-size(30) calc-size(20);
+  }
+}
+
+.article__figure {
+  aspect-ratio: 892/512;
+  width: 100%;
+  display: block;
+}
+
+.article__img {
+  width: 100%;
+  height: 100%;
+}
+
+.link__wrapper {
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-main__main-btn {
+  margin-top: 75px;
+}

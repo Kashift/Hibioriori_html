@@ -1,0 +1,27 @@
+.faq-main {
+  text-align: left;
+  padding: 62px 0 84px;
+}
+
+.faq-main__q {
+  font-size: 24px;
+  font-weight: $medium;
+  @include mq-down(md) {
+    font-size: 20px;
+  }
+  &:not(:first-child) {
+    margin-top: 42px;
+  }
+}
+
+.faq-main__a {
+  font-size: 16px;
+  font-weight: $medium;
+  background-color: #F8F8F8;
+  padding: 22px 26px 45px 26px;
+  margin-top: 20px;
+  @include mq-down(md) {
+    font-size: 14px;
+    padding-bottom: 30px;
+  }
+}

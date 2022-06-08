@@ -1,0 +1,99 @@
+/* ハンバーガーメニュー */
+
+/* ボタンを固定 */
+.hum {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 17px;
+  /* ボタン幅、高さの調整 */
+  width: 80px;
+  height: 80px;
+  z-index: 3;
+  background-color: #221815;
+}
+
+.hum__inner {
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hum__line {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, top 0.5s ease;
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 17px;
+  }
+  &:nth-child(3) {
+    top: 34px;
+  }
+}
+
+.hum.open .hum__line {
+  /* 真ん中の線を非表示 */
+  &:nth-child(2) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+  }
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  &:nth-child(1) {
+    top: 18px;
+    transform: rotate(45deg);
+  }
+  &:nth-child(3) {
+    top: 18px;
+    transform: rotate(-45deg);
+  }
+}
+
+/* メニューを隠す */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #221815;
+  transition: 0.8s;
+}
+
+/* .openがあるときに表示 */
+.main-nav.open {
+  left: 0;
+}
+
+/* メニューの縦並び */
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: calc(980px + (20px * 2));
+  margin: 0 auto;
+  padding: 300px 20px 0;
+  @include mq-down(md) {
+    padding: 20vh calc-size(25) 0;
+  }
+}
+
+.main-nav__item {
+  margin-top: 25px;
+}
+
+.main-nav__link {
+  font-size: 18px;
+  font-family: $sans;
+  font-weight: $regular;
+  color: #fff;
+}

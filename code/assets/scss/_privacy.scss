@@ -1,0 +1,19 @@
+.privacy-main {
+  text-align: left;
+  line-height: 1.5;
+  padding: 60px 0 160px;
+}
+
+.privacy-main__heading {
+  font-size: 22px;
+  font-weight: $bold;
+  &:not(:first-child) {
+    margin-top: 1em;
+  }
+}
+
+.privacy-main__text {
+  @include mq-down(md) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,228 @@
+// フォント
+body {
+  font-size: 16px;
+  font-family: $serif;
+  font-weight: $regular;
+  line-height: 1.875;
+  color: $color-black;
+  text-align: center;
+}
+
+// コンテンツ幅
+.main-container {
+  max-width: calc(980px + (20px * 2));
+  margin: 0 auto;
+  padding: 0 20px;
+  @include mq-down(md) {
+  padding: 0 25px;
+  }
+}
+
+// pcのみ表示
+.pc {
+  @include mq-down(md) {
+    display: none !important;
+  }
+}
+
+// spのみ表示
+.sp {
+  display: none;
+  @include mq-down(md) {
+    display: block;
+  }
+}
+
+// ホバー
+a:hover {
+  opacity: 0.8;
+}
+
+// 共通、コンポーネント
+.heading {
+  font-size: 36px;
+  line-height: 1.3333333333333333;
+  text-align: center;
+  font-weight: $bold;
+  @include mq-down(md) {
+    font-size: 28px;
+    line-height: 1.7;
+  }
+}
+
+.sub-heading {
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: $bold;
+  margin-top: to-em(18, 20);
+  @include mq-down(md) {
+  }
+}
+
+.bar-wrapper {
+  width: 100vw;
+  aspect-ratio: 1280/274;
+  @include mq-down(md) {
+    aspect-ratio: 390/150;
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plan-head__title {
+  width: 516px;
+  max-width: 95%;
+  position: relative;
+  margin: 0 auto;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    @include mq-down(md) {
+      display: none;
+    }
+  }
+  span {
+    position: relative;
+    padding: 0 14px;
+    background: #fff;
+    @include mq-down(md) {
+      display: block;
+    }
+  }
+}
+
+.plan-head__img {
+  width: 100%;
+  aspect-ratio: 980/460;
+  object-fit: cover;
+  margin-top: 31px;
+  @include mq-down(md) {
+    width: 100vw;
+    aspect-ratio: 390/360;
+    margin: calc-size(40) calc(50% - 50vw) 0;
+  }
+}
+
+.plan-head__text {
+  width: 616px;
+  max-width: 80%;
+  margin: 35px auto 0;
+  @include mq-down(md) {
+    max-width: 100%;
+  }
+}
+
+.item {
+  width: to-em(170, 22);
+  font-size: 22px;
+  font-weight: $bold;
+  text-align: center;
+  border: 1px solid $color-black;
+  padding: 6px 0 5px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: $medium;
+  margin: auto 0 4px;
+  span {
+    font-size: 16px;
+  }
+}
+
+.main-btn {
+  width: to-em(448, 28);
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1.71;
+  font-weight: $bold;
+  color: #fff;
+  background-color: $main-color;
+  padding: 17px 0 16px;
+  @include mq-down(md) {
+    font-size: calc-size(18);
+    padding: 15px 0;
+  }
+}
+
+.sub-btn {
+  font-size: 18px;
+  font-weight: $bold;
+  color: $main-color;
+  display: inline-block;
+}
+
+.sub-btn--before::before {
+  content: "≪";
+  margin-right: 0.5em;
+}
+
+.sub-btn--after::after {
+  content: "≫";
+  margin-left: 0.5em;
+}
+
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 22px;
+  @include mq-down(md) {
+    row-gap: calc-size(18);
+  }
+}
+
+.news-item {
+  width: calc((100% - (22px * 2)) / 3);
+  background-color: #f8f8f8;
+  @include mq-down(lg) {
+    width: calc((100% - (22px * 1)) / 2);
+  }
+  @include mq-down(md) {
+    width: 100%;
+  }
+}
+
+.news-item__link {
+  display: block;
+}
+
+.news-item__img {
+  width: 100%;
+  aspect-ratio: 312/188;
+  display: block;
+}
+
+.news-item__body {
+  width: 77%;
+  aspect-ratio: 312/104;
+  padding: 12px 0 18px;
+  margin: 0 auto;
+}
+
+.news-item__info {
+  font-size: 12px;
+  font-weight: $black;
+  color: $main-color;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.news-item__cat {
+  margin-left: 1em;
+}
+
+.news-item__text {
+  font-size: 15px;
+  font-weight: $bold;
+  color: #000;
+  margin-top: 5px;
+}

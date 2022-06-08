@@ -1,0 +1,118 @@
+.plan-main {
+  padding-top: 70px;
+}
+
+.plan-body {
+  display: flex;
+  text-align: left;
+  margin-top: 83px;
+  > * {
+    width: 50%;
+    @include mq-down(md) {
+      width: 100%;
+    }
+  }
+  @include mq-down(md) {
+    margin-top: calc-size(40);
+    flex-direction: column;
+    row-gap: calc-size(60);
+  }
+}
+
+.plan-body__price {
+  margin-top: 29px;
+  @include mq-down(md) {
+    margin-top: calc-size(18);
+  }
+}
+
+.plan-body__time {
+  width: 100%;
+  margin-top: 33px;
+  @include mq-down(md) {
+    margin-top: calc-size(22);
+  }
+}
+
+.plan-body__text {
+  margin-top: 25px;
+  @include mq-down(md) {
+    font-size: 14px;
+    margin-top: calc-size(15);
+  }
+}
+
+.plan-body__text--sub {
+  display: inline-block;
+  border-left: 1px solid #000;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-left: 59px;
+}
+
+.plan-body__text--space {
+  padding-left: 36px;
+}
+
+.plan-body__text--bold {
+  font-weight: $bold;
+}
+
+.plan-body__text--long {
+  margin-left: -36px;
+}
+
+.plan-body__text--note {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 59px;
+}
+
+.plan-main__btn {
+  margin-top: 86px;
+  @include mq-down(md) {
+    margin-top: calc-size(60);
+  }
+}
+
+.plan__bar-wrapper {
+  margin-top: 90px;
+}
+
+.plan-facility {
+  text-align: left;
+  padding-bottom: 97px;
+  @include mq-down(md) {
+    padding-bottom: calc-size(70);
+  }
+}
+
+.plan-facility__title {
+  font-size: 22px;
+  font-weight: $bold;
+  margin-top: 25px;
+}
+
+.plan-facility__text {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.plan-facility__img-box {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+  @include mq-down(md) {
+    margin-top: calc-size(24);
+    gap: calc-size(15);
+  }
+}
+
+.plan-facility__img {
+  width: calc(50% - (50px / 2));
+  aspect-ratio: 465/300;
+  @include mq-down(md) {
+    width: calc(50% - (#{calc-size(15)} / 2));
+  }
+}
